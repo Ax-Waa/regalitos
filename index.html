@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todo para que me regalen un hilo </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<canvas id="nieve"></canvas>
+
+<div id="intro" class="intro-overlay">
+  <p class="ojo"></p>
+  <button id="btn-comenzar" class="boton boton-intro">Clickea</button>
+</div>
+
+<button id="btn-sonido" aria-label="Activar o silenciar música">🔇</button>
+
+  <main class="tarjeta">
+    <h1>Quién soy?</h1>
+    <p class="sub">Elige tu nombre xd</p>
+
+    <div class="campo">
+      <select id="quien-soy">
+        <option value="" disabled selected>Escoge tu nombre (no elijas otro)</option>
+        <option value="Julio">Julito</option>
+        <option value="Shaiel">Shaiel</option>
+        <option value="Lisaida">Lisaida</option>
+        <option value="Kelled">Kelled</option>
+        <option value="José">José</option>
+        <option value="Axel">Axel</option>
+      </select>
+    </div>
+
+    <button id="btn-continuar" class="boton" disabled>Continuar</button>
+
+    <a href="resultado.html" class="enlace">Si ya te registraste clickea acá →</a>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

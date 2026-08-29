@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todo para que me regalen un hilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="nieve"></canvas>
+
+  <button id="btn-sonido" aria-label="Activar o silenciar música">🔊</button>
+
+  <main class="tarjeta">
+    <h1>Hacer el sorteo</h1>
+    <p class="sub" id="estado-texto">Revisando cuántos se han registrado...</p>
+
+    <p id="mensaje" class="mensaje"></p>
+
+    <button id="btn-sortear" class="boton" disabled>Sortear ahora</button>
+    <a href="index.html" class="enlace">← Volver al inicio</a>
+  </main>
+
+  <script type="module" src="js/pantalla-sorteo.js"></script>
+</body>
+</html>

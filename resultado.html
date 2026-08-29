@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todo para que me regalen un hilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="nieve"></canvas>
+
+  <button id="btn-sonido" aria-label="Activar o silenciar música">🔊</button>
+
+  <main class="tarjeta">
+    <h1>Ver mi resultado</h1>
+    <p class="sub">Pon tu nombre y tu contraseña. Solo tú puedes ver esto</p>
+
+    <form id="form-revelar">
+      <div class="campo">
+        <select id="quien-soy" required>
+          <option value="" disabled selected>Selecciona tu nombre</option>
+          <option value="Julio">Julio</option>
+          <option value="Shaiel">Shaiel</option>
+          <option value="Lisaida">Lisaida</option>
+          <option value="Kelled">Kelled</option>
+          <option value="José">José</option>
+          <option value="Axel">Axel</option>
+        </select>
+      </div>
+      <div class="campo">
+        <input type="password" id="clave" placeholder="Tu contraseña" autocomplete="current-password" required />
+      </div>
+
+      <p id="mensaje" class="mensaje"></p>
+
+      <button type="submit" id="btn-revelar" class="boton">Revelar</button>
+    </form>
+
+    <div id="resultado" class="resultado oculto">
+      <p class="ojo">le regalas a</p>
+      <p id="nombre-receptor" class="nombre-grande"></p>
+    </div>
+
+    <a href="index.html" class="enlace">← Volver al inicio</a>
+  </main>
+
+  <script type="module" src="js/resultado.js"></script>
+</body>
+</html>

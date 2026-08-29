@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todo para que me regalen un hilo </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="nieve"></canvas>
+
+  <button id="btn-sonido" aria-label="Activar o silenciar música">🔊</button>
+
+  <main class="tarjeta">
+    <h1 id="titulo">Hola</h1>
+    <p class="sub">Crea una contraseña. Sin eso no podrás volver asi que <strong>GUARDALA BIEN</strong>, ni yo sé como recuperarla xd</p>
+
+    <form id="form-registro">
+      <div class="campo">
+        <input type="password" id="clave" placeholder="Contraseña" autocomplete="new-password" required minlength="4" />
+      </div>
+      <div class="campo">
+        <input type="password" id="clave-confirmar" placeholder="Repite la contraseña" autocomplete="new-password" required minlength="4" />
+      </div>
+
+      <p id="mensaje" class="mensaje"></p>
+
+      <button type="submit" id="btn-registrar" class="boton">Registrarme</button>
+    </form>
+
+    <div id="esperando" class="resultado oculto">
+      <div class="spinner" id="spinner-espera"></div>
+      <p class="contador" id="contador-espera">PERA QUE TODOS SE REGISTREEENNNN</p>
+      <p class="sub" id="detalle-espera"></p>
+      <a href="sorteo.html" id="enlace-sorteo" class="enlace oculto">Ir a hacer el sorteo →</a>
+    </div>
+  </main>
+
+  <script type="module" src="js/registro.js"></script>
+</body>
+</html>

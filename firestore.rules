@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Llaves públicas: cualquiera puede leerlas (son públicas por diseño),
+    // pero una vez creado un nombre, nadie lo puede pisar ni borrar.
+    match /registros/{nombre} {
+      allow read: if true;
+      allow create: if !exists(/databases/$(database)/documents/registros/$(nombre));
+      allow update, delete: if false;
+    }
+
+    // Resultados cifrados: lectura pública (son ilegibles sin la contraseña),
+    // pero solo se pueden crear una vez, nunca modificar.
+    match /resultados/{nombre} {
+      allow read: if true;
+      allow create: if !exists(/databases/$(database)/documents/resultados/$(nombre));
+      allow update, delete: if false;
+    }
+
+    // Bandera de "el sorteo ya se hizo": evita que alguien lo repita.
+    match /estado/{doc} {
+      allow read: if true;
+      allow create: if !exists(/databases/$(database)/documents/estado/$(doc));
+      allow update, delete: if false;
+    }
+  }
+}
